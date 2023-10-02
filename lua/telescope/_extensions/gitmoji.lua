@@ -17,14 +17,14 @@ local function search(opts)
   local displayer = entry_display.create({
     separator = " ",
     items = {
-      { width = 40 },
-      { width = 18 },
+      { width = 4 },
+      { width = 54 },
       { remaining = true },
     },
   })
   local make_display = function(entry)
     return displayer({
-      entry.value .. " " .. entry.name,
+      entry.name,
       entry.description,
     })
   end
