@@ -3,8 +3,7 @@
 An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 that allows you to search [gitmojis](https://gitmoji.dev/)
 
-<!-- markdownlint-disable-next-line -->
-<img width="800" alt="screenshot" src="https://user-images.githubusercontent.com/47070852/124722843-07b16f00-df3d-11eb-891c-9a316e8d577c.gif">
+![image](https://github.com/mjacobus/telescope-gitmoji.nvim/assets/226834/b95fc539-ba64-42c3-b15e-d6eeec7d55fd)
 
 ## Get Started
 
