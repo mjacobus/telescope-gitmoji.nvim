@@ -5,7 +5,7 @@ local conf = require("telescope.config").values
 local entry_display = require("telescope.pickers.entry_display")
 local action_state = require("telescope.actions.state")
 
-local gitmoji = require("telescope-gitmoji").gitmoji
+local gitmojis = require("telescope-gitmoji").gitmojis
 
 local function action(gitmoji)
   vim.fn.setreg("*", gitmoji.value)
@@ -34,7 +34,7 @@ local function search(opts)
     prompt_title = "Gitmoji",
     sorter = conf.generic_sorter(opts),
     finder = finders.new_table({
-      results = gitmoji,
+      results = gitmojis,
       entry_maker = function(gitmoji)
         return {
           ordinal = gitmoji.name .. gitmoji.category .. gitmoji.description,
