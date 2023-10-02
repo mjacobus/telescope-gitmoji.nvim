@@ -1,7 +1,7 @@
-# telescope-emoji.nvim
+# telescope-gitmoji.nvim
 
 An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-that allows you to search emojis😃
+that allows you to search [gitmojis](https://gitmoji.dev/)
 
 <!-- markdownlint-disable-next-line -->
 <img width="800" alt="screenshot" src="https://user-images.githubusercontent.com/47070852/124722843-07b16f00-df3d-11eb-891c-9a316e8d577c.gif">
@@ -11,13 +11,13 @@ that allows you to search emojis😃
 Install telescope and this plugin then
 
 ```lua
-require("telescope").load_extension("emoji")
+require("telescope").load_extension("gitmoji")
 ```
 
 ## Usage
 
 ```
-:Telescope emoji
+:Telescope gitmoji
 ```
 
 ## Configuraion
@@ -29,18 +29,22 @@ by default
 ```lua
 telescope.setup {
   extensions = {
-    emoji = {
-      action = function(emoji)
-        -- argument emoji is a table.
+    gitmoji = {
+      action = function(gitmoji)
+        -- argument gitmoji is a table.
         -- {name="", value="", cagegory="", description=""}
 
-        vim.fn.setreg("*", emoji.value)
-        print([[Press p or "*p to paste this emoji]] .. emoji.value)
+        vim.fn.setreg("*", gitmoji.value)
+        print([[Press p or "*p to paste this gitmoji]] .. gitmoji.value)
 
-        -- insert emoji when picked
-        -- vim.api.nvim_put({ emoji.value }, 'c', false, true)
+        -- insert gitmoji when picked
+        -- vim.api.nvim_put({ gitmoji.value }, 'c', false, true)
       end,
     }
   },
 }
 ```
+
+## Credits
+
+This plugin is a shameless copy and paste of https://github.com/xiyaowong/telescope-emoji.nvim.
