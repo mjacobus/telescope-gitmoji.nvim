@@ -25,7 +25,6 @@ local function search(opts)
   local make_display = function(entry)
     return displayer({
       entry.value .. " " .. entry.name,
-      entry.category,
       entry.description,
     })
   end
