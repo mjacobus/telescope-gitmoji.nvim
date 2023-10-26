@@ -1,5 +1,7 @@
 # telescope-gitmoji.nvim
 
+Use https://github.com/Dynge/gitmoji.nvim instead.
+
 An extension for [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 that allows you to search [gitmojis](https://gitmoji.dev/)
 
